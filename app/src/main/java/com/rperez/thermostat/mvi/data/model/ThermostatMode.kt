@@ -1,4 +1,3 @@
 package com.rperez.thermostat.mvi.data.model
 
-class ThermostatMode {
-}
+enum class ThermostatMode { HEAT, COOL, AUTO, OFF }
