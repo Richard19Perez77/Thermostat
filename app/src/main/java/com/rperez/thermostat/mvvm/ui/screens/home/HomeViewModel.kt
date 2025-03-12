@@ -1,5 +1,19 @@
 package com.rperez.thermostat.mvvm.ui.screens.home
 
+import dagger.hilt.android.lifecycle.HiltViewModel
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.rperez.thermostat.mvvm.domain.usecase.GetThermostatStatusUseCase
+import com.rperez.thermostat.mvvm.domain.usecase.SetTemperatureUseCase
+import com.rperez.thermostat.mvvm.domain.usecase.ChangeModeUseCase
+import com.rperez.thermostat.mvvm.data.model.Thermostat
+import com.rperez.thermostat.mvvm.data.model.ThermostatMode
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.launch
+import javax.inject.Inject
+
 @HiltViewModel
 class HomeViewModel @Inject constructor(
     private val getStatusUseCase: GetThermostatStatusUseCase,

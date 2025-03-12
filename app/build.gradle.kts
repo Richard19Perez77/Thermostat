@@ -42,6 +42,13 @@ android {
 }
 
 dependencies {
+    // Kotlin Coroutines (Core and Android)
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.1")
+
+    // Jetpack Compose Runtime (needed for collectAsState)
+    implementation("androidx.compose.runtime:runtime:1.7.8")
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
     implementation("com.google.dagger:hilt-android:2.54")
